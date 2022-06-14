@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <script src="script.js" defer></script>
+    <title>Jeu de dés</title>
+</head>
+<body>
+
+<p id="p1"></p>
+<p id="p2"></p>
+
+<!-- Annonce du joueur -->
+<div class="joueur"><p>C'est au tour de : <br><span id="playerTurn"></span></p></div>
+
+
+<!-- Scores joueur 1 -->
+
+<div class="tirageP1"><p>Score du tirage : <br> <span id="labelReplayP1">0</span></p></div>
+<div class="tourP1"><p>Score du tour : <br> <span id="labelTourP1">0</span></p></div>
+<div class="totalP1"><p>Score total : <br> <span id="labelGlobalP1">0</span></p></div>
+
+
+<!-- bouton d'action du jeu -->
+
+<p id="reset">
+    <svg xmlns="http://www.w3.org/2000/svg" width="6rem" height="6rem" fill="currentColor" class="bi bi-arrow-clockwise"
+         viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+        <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+    </svg>
+    <br>New Game
+</p>
+<p id="replay">
+    <svg xmlns="http://www.w3.org/2000/svg" width="6rem" height="6rem" fill="currentColor" class="bi bi-play"
+         viewBox="0 0 16 16">
+        <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+    </svg>
+    <br>Play
+</p>
+<p id="hold">
+    <svg xmlns="http://www.w3.org/2000/svg" width="6rem" height="6rem" fill="currentColor" class="bi bi-check2"
+         viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </svg>
+    <br>Hold
+</p>
+
+
+<!-- Scores Joueur 2 -->
+
+<div class="tirageP2"><p>Score du tirage : <br> <span id="labelReplayP2">0</span></p></div>
+<div class="tourP2"><p>Score du tour : <br> <span id="labelTourP2">0</span></p></div>
+<div class="totalP2"><p>Score total : <br> <span id="labelGlobalP2">0</span></p></div>
+
+</body>
+</html>

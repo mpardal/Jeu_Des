@@ -1,0 +1,98 @@
+body{
+    font-family: "Andale Mono", serif;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+            " . joueur . "
+            "tirageP1 newGame tirageP2"
+            "roundP1 play roundP2"
+            "globalP1 hold globalP2";
+}
+
+div, button {
+    text-align: center;
+    margin: 1rem;
+}
+
+div{
+    background: #ad1919;
+}
+
+#playerTurn,
+#labelReplayP1,
+#labelTourP1,
+#labelGlobalP1,
+#labelReplayP2,
+#labelTourP2,
+#labelGlobalP2{
+    font-size: 3rem;
+}
+
+#reset,
+#replay,
+#hold{
+    margin: auto;
+    text-align: center;
+}
+
+#p1,
+#p2{
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+    font-family: Baghdad, serif;
+}
+
+#reset{
+    grid-area: newGame;
+}
+
+#replay{
+    grid-area: play;
+}
+
+#hold{
+    grid-area: hold;
+}
+
+.joueur{
+    grid-area: joueur;
+}
+
+.tirageP1{
+    grid-area: tirageP1;
+}
+
+.tirageP2{
+    grid-area: tirageP2;
+}
+
+.tourP1 {
+    grid-area: roundP1;
+}
+
+.tourP2 {
+    grid-area: roundP2;
+}
+
+.totalP1{
+    grid-area: globalP1;
+}
+
+.totalP2{
+    grid-area: globalP2;
+}
+
+.tirageP1,
+.tourP1,
+.totalP1,
+.tirageP2,
+.tourP2,
+.totalP2 {
+    width: 60%;
+    border-radius: 50%;
+    margin: auto;
+}
+
