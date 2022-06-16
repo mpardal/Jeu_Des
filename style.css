@@ -1,73 +1,85 @@
-body{
-    font-family: "Andale Mono", serif;
+body {
+    font-family: Lato, sans-serif;
     margin: 0;
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr ;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-            " . joueur . "
-            "tirageP1 newGame tirageP2"
-            "roundP1 play roundP2"
-            "globalP1 hold globalP2";
+    background: rgba(99, 42, 15, 0.85);
 }
 
-div, button {
+main {
+    background: white;
+    margin: 1%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+            ". newGame ."
+            " p1 . p2 "
+            "globalP1 des globalP2"
+            ". play ."
+            "roundP1 hold roundP2";
+}
+
+div,
+button {
     text-align: center;
     margin: 1rem;
 }
 
-div{
-    background: #ad1919;
+#labelTourP1,
+#labelTourP2 {
+    font-size: 3rem;
+    color: white;
 }
 
-#playerTurn,
-#labelReplayP1,
-#labelTourP1,
 #labelGlobalP1,
-#labelReplayP2,
-#labelTourP2,
-#labelGlobalP2{
-    font-size: 3rem;
+#labelGlobalP2 {
+    font-size: 5rem;
 }
 
 #reset,
 #replay,
-#hold{
+#hold {
     margin: auto;
     text-align: center;
+}
+
+#p1 {
+    grid-area: p1;
+    margin: auto;
+}
+
+#p2 {
+    grid-area: p2;
+    margin : auto;
+}
+
+#act1,
+#act2{
+    display: none;
 }
 
 #p1,
-#p2{
+#p2 {
     margin: auto;
-    text-align: center;
     font-size: 3rem;
-    font-family: Baghdad, serif;
 }
 
-#reset{
+
+#reset {
     grid-area: newGame;
 }
 
-#replay{
+#replay {
     grid-area: play;
 }
 
-#hold{
+#hold {
     grid-area: hold;
 }
 
-.joueur{
+.joueur {
     grid-area: joueur;
 }
 
-.tirageP1{
-    grid-area: tirageP1;
-}
-
-.tirageP2{
-    grid-area: tirageP2;
-}
 
 .tourP1 {
     grid-area: roundP1;
@@ -77,22 +89,37 @@ div{
     grid-area: roundP2;
 }
 
-.totalP1{
+.totalP1 {
     grid-area: globalP1;
 }
 
-.totalP2{
+.totalP2 {
     grid-area: globalP2;
 }
 
-.tirageP1,
-.tourP1,
 .totalP1,
-.tirageP2,
-.tourP2,
-.totalP2 {
-    width: 60%;
-    border-radius: 50%;
-    margin: auto;
+.totalP2,
+svg {
+    color: #d24646;
 }
+
+.tourP1,
+.tourP2 {
+    width: 9rem;
+    height: 9rem;
+    background: #d24646;
+    margin: auto auto 3rem;
+}
+
+#des1,
+#des2,
+#des3,
+#des4,
+#des5,
+#des6 {
+    grid-area: des;
+    margin: auto;
+    display: none;
+}
+
 
