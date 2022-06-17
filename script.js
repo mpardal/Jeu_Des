@@ -34,6 +34,8 @@ const labelTourP2 = document.querySelector('#labelTourP2')
 const labelGlobalP2 = document.querySelector('#labelGlobalP2')
 const p1 = document.querySelector('#p1')
 const p2 = document.querySelector('#p2')
+const pt1 = document.querySelector('#pt1')
+const pt2 = document.querySelector('#pt2')
 
 //Déclaration des dés
 const des1 = document.getElementById('des1')
@@ -44,18 +46,13 @@ const des5 = document.getElementById('des5')
 const des6 = document.getElementById('des6')
 
 
-const playerTurn = document.querySelector('#playerTurn')
-
 const totalToWin = 100
 
 let currentPlayer = player1
+pt1.innerText = pt1.style.display = 'inline'
 
 //Demande du nom des joueurs
 name()
-
-//Affichage du nom
-//playerTurn.innerHTML = currentPlayer.name
-
 
 //Bouton de remise à zéro
 reset.addEventListener('click', () => {
@@ -74,12 +71,15 @@ reset.addEventListener('click', () => {
 replay.addEventListener('click', () => {
     let number = generateNumber()
 
-
     if (currentPlayer === player1){
+        pt1.innerText = pt1.style.display = 'inline'
+        pt2.innerText = pt2.style.display = 'none'
         dice(number)
         tirage(number)
         updateHtml(player1)
     }else {
+        pt2.innerText = pt2.style.display = 'inline'
+        pt1.innerText = pt1.style.display = 'none'
         dice(number)
         tirage(number)
         updateHtml(player2)
@@ -158,16 +158,19 @@ function updateHtml(p) {
  */
 function changePlayer(newPlayer) {
     currentPlayer = newPlayer
-    //playerTurn.innerHTML = currentPlayer.name
 }
 
 function togglePlayer() {
     if (currentPlayer === player1) {
         player1.round = 0
         changePlayer(player2)
+        pt2.innerText = pt2.style.display = 'inline'
+        pt1.innerText = pt1.style.display = 'none'
     } else {
         player2.round = 0
         changePlayer(player1)
+        pt1.innerText = pt1.style.display = 'inline'
+        pt2.innerText = pt2.style.display = 'none'
     }
 }
 

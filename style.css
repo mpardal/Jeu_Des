@@ -1,5 +1,5 @@
 body {
-    font-family: Lato, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     background: rgba(99, 42, 15, 0.85);
 }
@@ -42,18 +42,18 @@ button {
     text-align: center;
 }
 
-#p1 {
+#name1 {
     grid-area: p1;
-    margin: auto;
+    display: inline;
 }
 
-#p2 {
+#name2 {
     grid-area: p2;
-    margin : auto;
+    display: inline;
 }
 
-#act1,
-#act2{
+#pt1,
+#pt2{
     display: none;
 }
 
