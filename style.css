@@ -1,12 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Lato', sans-serif;
-    margin: 0;
+    padding: 1px;
     background: rgba(99, 42, 15, 0.85);
 }
 
 main {
     background: white;
-    margin: 1%;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -59,6 +63,7 @@ button {
 
 #p1,
 #p2 {
+    font-weight: 100;
     margin: auto;
     font-size: 3rem;
 }

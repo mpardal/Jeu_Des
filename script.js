@@ -50,6 +50,7 @@ const totalToWin = 100
 
 let currentPlayer = player1
 pt1.innerText = pt1.style.display = 'inline'
+p1.style.fontWeight = "400"
 
 //Demande du nom des joueurs
 name()
@@ -60,6 +61,7 @@ reset.addEventListener('click', () => {
     player1.round = 0
     player2.global = 0
     player2.round = 0
+    pt1.innerText = pt1.style.display = 'inline'
     name()
     updateHtml(player1)
     changePlayer(player1)
@@ -74,12 +76,16 @@ replay.addEventListener('click', () => {
     if (currentPlayer === player1){
         pt1.innerText = pt1.style.display = 'inline'
         pt2.innerText = pt2.style.display = 'none'
+        p2.style.fontWeight = "100"
+        p1.style.fontWeight = "400"
         dice(number)
         tirage(number)
         updateHtml(player1)
     }else {
         pt2.innerText = pt2.style.display = 'inline'
         pt1.innerText = pt1.style.display = 'none'
+        p2.style.fontWeight = "400"
+        p1.style.fontWeight = "100"
         dice(number)
         tirage(number)
         updateHtml(player2)
@@ -166,11 +172,15 @@ function togglePlayer() {
         changePlayer(player2)
         pt2.innerText = pt2.style.display = 'inline'
         pt1.innerText = pt1.style.display = 'none'
+        p2.style.fontWeight = "400"
+        p1.style.fontWeight = "100"
     } else {
         player2.round = 0
         changePlayer(player1)
         pt1.innerText = pt1.style.display = 'inline'
         pt2.innerText = pt2.style.display = 'none'
+        p2.style.fontWeight = "100"
+        p1.style.fontWeight = "400"
     }
 }
 
