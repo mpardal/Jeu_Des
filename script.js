@@ -165,11 +165,11 @@ function togglePlayer() {
     if (currentPlayer === player1) {
         player1.round = 0
         changePlayer(player2)
-        styleP1()
+        styleP2()
     } else {
         player2.round = 0
         changePlayer(player1)
-        styleP2()
+        styleP1()
     }
 }
 
