@@ -45,7 +45,6 @@ const des4 = document.getElementById('des4')
 const des5 = document.getElementById('des5')
 const des6 = document.getElementById('des6')
 
-
 const totalToWin = 100
 
 let currentPlayer = player1
@@ -55,6 +54,11 @@ p1.style.fontWeight = "400"
 //Demande du nom des joueurs
 name()
 
+
+// Consigne
+consigne()
+
+
 //Bouton de remise à zéro
 reset.addEventListener('click', () => {
     player1.global = 0
@@ -63,6 +67,7 @@ reset.addEventListener('click', () => {
     player2.round = 0
     styleP1()
     name()
+    consigne()
     updateHtml(player1)
     changePlayer(player1)
     updateHtml(player2)
@@ -135,6 +140,11 @@ function name() {
     }
 }
 
+function consigne(){
+    alert("Pour jouer, il faut appuyer sur ROLL DICE, si vous faites 1, votre tour s'arrête et votre score du tour (CURRENT), " +
+        "vous cumulez des points en faisant des chiffres de 2 à 6. Lorsque vous décidez de finir votre tour, appuyer sur HOLD." +
+        "Le premier à 100 gagne.")
+}
 
 /**
  * Permet de mettre à jour le html avec les scores en paramètres
