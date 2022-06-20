@@ -61,7 +61,7 @@ reset.addEventListener('click', () => {
     player1.round = 0
     player2.global = 0
     player2.round = 0
-    pt1.innerText = pt1.style.display = 'inline'
+    styleP1()
     name()
     updateHtml(player1)
     changePlayer(player1)
@@ -74,18 +74,12 @@ replay.addEventListener('click', () => {
     let number = generateNumber()
 
     if (currentPlayer === player1){
-        pt1.innerText = pt1.style.display = 'inline'
-        pt2.innerText = pt2.style.display = 'none'
-        p2.style.fontWeight = "100"
-        p1.style.fontWeight = "400"
+        styleP1()
         dice(number)
         tirage(number)
         updateHtml(player1)
     }else {
-        pt2.innerText = pt2.style.display = 'inline'
-        pt1.innerText = pt1.style.display = 'none'
-        p2.style.fontWeight = "400"
-        p1.style.fontWeight = "100"
+        styleP2()
         dice(number)
         tirage(number)
         updateHtml(player2)
@@ -141,6 +135,7 @@ function name() {
     }
 }
 
+
 /**
  * Permet de mettre à jour le html avec les scores en paramètres
  *
@@ -170,17 +165,11 @@ function togglePlayer() {
     if (currentPlayer === player1) {
         player1.round = 0
         changePlayer(player2)
-        pt2.innerText = pt2.style.display = 'inline'
-        pt1.innerText = pt1.style.display = 'none'
-        p2.style.fontWeight = "400"
-        p1.style.fontWeight = "100"
+        styleP1()
     } else {
         player2.round = 0
         changePlayer(player1)
-        pt1.innerText = pt1.style.display = 'inline'
-        pt2.innerText = pt2.style.display = 'none'
-        p2.style.fontWeight = "100"
-        p1.style.fontWeight = "400"
+        styleP2()
     }
 }
 
@@ -195,6 +184,20 @@ function tirage(number){
         currentPlayer.round = 0
         togglePlayer()
     }
+}
+
+function styleP1 (){
+    pt1.innerText = pt1.style.display = 'inline'
+    pt2.innerText = pt2.style.display = 'none'
+    p2.style.fontWeight = "100"
+    p1.style.fontWeight = "400"
+}
+
+function styleP2 (){
+    pt2.innerText = pt2.style.display = 'inline'
+    pt1.innerText = pt1.style.display = 'none'
+    p2.style.fontWeight = "400"
+    p1.style.fontWeight = "100"
 }
 
 function dice(number){
