@@ -1,119 +1,117 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    padding: 1px;
-    background: rgba(99, 42, 15, 0.85);
+  font-family: "Lato", sans-serif;
+  padding: 1px;
+  background: rgba(99, 42, 15, 0.85);
 }
 
 main {
-    background: white;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-            ". newGame ."
-            " p1 . p2 "
-            "globalP1 des globalP2"
-            ". play ."
-            "roundP1 hold roundP2";
+  background: white;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    ". newGame ."
+    " p1 . p2 "
+    "globalP1 des globalP2"
+    ". play ."
+    "roundP1 hold roundP2";
 }
 
 div,
 button {
-    text-align: center;
-    margin: 1rem;
+  text-align: center;
+  margin: 1rem;
 }
 
 #labelTourP1,
 #labelTourP2 {
-    font-size: 3rem;
-    color: white;
+  font-size: 3rem;
+  color: white;
 }
 
 #labelGlobalP1,
 #labelGlobalP2 {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 #reset,
 #replay,
 #hold {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
 
 #name1 {
-    grid-area: p1;
-    display: inline;
+  grid-area: p1;
+  display: inline;
 }
 
 #name2 {
-    grid-area: p2;
-    display: inline;
+  grid-area: p2;
+  display: inline;
 }
 
 #pt1,
-#pt2{
-    display: none;
+#pt2 {
+  display: none;
 }
 
 #p1,
 #p2 {
-    font-weight: 100;
-    margin: auto;
-    font-size: 3rem;
+  font-weight: 100;
+  margin: auto;
+  font-size: 3rem;
 }
 
-
 #reset {
-    grid-area: newGame;
+  grid-area: newGame;
 }
 
 #replay {
-    grid-area: play;
+  grid-area: play;
 }
 
 #hold {
-    grid-area: hold;
+  grid-area: hold;
 }
 
 .joueur {
-    grid-area: joueur;
+  grid-area: joueur;
 }
 
-
 .tourP1 {
-    grid-area: roundP1;
+  grid-area: roundP1;
 }
 
 .tourP2 {
-    grid-area: roundP2;
+  grid-area: roundP2;
 }
 
 .totalP1 {
-    grid-area: globalP1;
+  grid-area: globalP1;
 }
 
 .totalP2 {
-    grid-area: globalP2;
+  grid-area: globalP2;
 }
 
 .totalP1,
 .totalP2,
 svg {
-    color: #d24646;
+  color: #d24646;
 }
 
 .tourP1,
 .tourP2 {
-    width: 9rem;
-    height: 9rem;
-    background: #d24646;
-    margin: auto auto 3rem;
+  width: 9rem;
+  height: 9rem;
+  background: #d24646;
+  margin: auto auto 3rem;
 }
 
 #des1,
@@ -122,9 +120,7 @@ svg {
 #des4,
 #des5,
 #des6 {
-    grid-area: des;
-    margin: auto;
-    display: none;
+  grid-area: des;
+  margin: auto;
+  display: none;
 }
-
-
