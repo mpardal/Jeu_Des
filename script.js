@@ -111,6 +111,8 @@ function global() {
 }
 
 /**
+ * Permet de définir un nombre aléatoire
+ *
  * @return {number}
  */
 function generateNumber() {
